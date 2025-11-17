@@ -1,5 +1,5 @@
 import socket
-
+from datetime import datetime
 
 s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
 print ("Socket Sucessfully Created")
@@ -27,6 +27,7 @@ while True:
 
 
     if path == "/":
+        status_code = 200
         html = """
             <html>
             <head><title>/</title></head>
@@ -38,6 +39,7 @@ while True:
             </html>
         """
     elif path == "/about":
+        status_code = 200
         html = """
             <html>
             <head><title>/</title></head>
@@ -49,6 +51,7 @@ while True:
             </html>
         """
     elif path == "/contact":
+        status_code = 200
         html = """
             <html>
             <head><title>/</title></head>
@@ -60,6 +63,7 @@ while True:
             </html>
         """
     else:
+        status_code = 404
         html = """
             <html>
             <head><title></title></head>
@@ -73,6 +77,11 @@ while True:
 
     response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
     c.send(response.encode())
+    timestamp = datetime.now()
+    address = addr
+    method = parts[0] if len(parts) > 0 else "Unknown"
+    print(f" Ip Address:{address} \n Time:{timestamp} \n Method:{method} \n Path:{path} ")
+
     c.close()
     
 
