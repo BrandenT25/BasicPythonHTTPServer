@@ -6,6 +6,6 @@ COPY BasicPythonHttpServer.py .
 
 EXPOSE 8000
 
-CMD ["python", "BasicPythonHttpServer.py"]
+CMD ["python","-u", "BasicPythonHttpServer.py"]
 
 
