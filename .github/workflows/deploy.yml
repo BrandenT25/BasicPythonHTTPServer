@@ -13,13 +13,15 @@ jobs:
 
     steps:
       - name: deploy to EC2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
+        uses: easingthemes/ssh-deploy@main
+        env:
+          REMOTE_HOST: ${{ secrets.EC2_HOST }}
+          REMOTE_USER: ${{ secrets.EC2_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_KEY }}
+          TARGET: http/BasicPythonHTTPServer
           port: 22
-          script: |
+        with:
+          script_after: |
             cd http/BasicPythonHTTPServer
             git pull origin main
             sudo docker build -t http-server . 
