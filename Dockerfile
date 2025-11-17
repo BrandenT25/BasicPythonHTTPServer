@@ -1,11 +1,11 @@
 FROM python:3.13-slim
 
-WORKDIR . 
+WORKDIR /app 
 
 COPY BasicPythonHttpServer.py .
 
 EXPOSE 8000
 
-CMD ["python", "BasicPythonHttpServer"]
+CMD ["python", "BasicPythonHttpServer.py"]
 
 
