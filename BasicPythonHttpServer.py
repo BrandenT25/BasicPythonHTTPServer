@@ -8,8 +8,9 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 port = 8000
 host_ip = '0.0.0.0'
-
-
+requests = 0 
+path_requests = {"/": 0, "/about": 0, "/contact" : 0, "/metrics": 0}
+status_counts = {"200": 0, "404": 0}
 s.bind((host_ip, port))
 print(f"Socket binded to {host_ip} on port {port}")
 
@@ -24,22 +25,26 @@ while True:
 
     parts = request.split()
     path = parts[1] if len(parts) > 1 else "/"
-
+    requests += 1
 
     if path == "/":
         status_code = 200
+        status_counts["200"] += 1
+        path_requests["/"] += 1
         html = """
-            <html>
-            <head><title>/</title></head>
-            <body>
-                <h1>Hello welcome to my basic https server in python</h1>
-                <a href="/about"><button type="button">about</button></a>
-                <a href="/contact"><button type="button">contact me</button></a>
-            </body
-            </html>
+        <html>
+        <head><title>/</title></head>
+        <body>
+        <h1>Hello welcome to my basic https server in python</h1>
+        <a href="/about"><button type="button">about</button></a>
+        <a href="/contact"><button type="button">contact me</button></a>
+        </body
+        </html>
         """
     elif path == "/about":
         status_code = 200
+        status_counts["200"] += 1
+        path_requests["/about"] += 1
         html = """
             <html>
             <head><title>/</title></head>
@@ -49,9 +54,11 @@ while True:
                 <a href="/"><button type="button">home</button></a>
             </body
             </html>
-        """
+            """
     elif path == "/contact":
         status_code = 200
+        status_counts["200"] += 1 
+        path_requests["/contact"] += 1
         html = """
             <html>
             <head><title>/</title></head>
@@ -62,8 +69,24 @@ while True:
             </body
             </html>
         """
+    elif path == "/metrics":
+        status_code = 200 
+        status_counts["200"] += 1 
+        path_requests["/metrics"] +=1
+        html = "<html><body><h1>Metrics</h1>"
+        html += f"<p>Total Requests: {requests}</p>"
+        html += "<h2>Requests By Path</h2><ul>"
+        for path, count in path_requests.items():
+            html += f"<li>{path}: {count} </li>"
+        html += "</ul>"
+        html += "<h2>Status Codes:</h2><ul>"
+        for status, count in status_counts.items():
+            html += f"<li> {status} : {count} </li>"
+        html += "</ul>"
+        html += "</body></html>"
     else:
         status_code = 404
+        status_counts["404"] += 1
         html = """
             <html>
             <head><title></title></head>
