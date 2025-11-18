@@ -23,7 +23,8 @@ jobs:
         with:
           script_after: |
             cd ~/http/http/BasicPythonHTTPServer
-            git pull origin main
+            git fetch origin
+            git reset --hard origin/main
             sudo docker build -t http-server . 
             sudo docker stop $(docker ps -q) || true
             sudo docker rm $(docker ps -aq) || true
