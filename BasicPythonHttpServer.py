@@ -28,53 +28,53 @@ while True:
     requests += 1
 
     if path == "/":
-        status_code = 200
-        status_counts["200"] += 1
-        path_requests["/"] += 1
-        html = """
-        <html>
-        <head><title>/</title></head>
-        <body>
-        <h1>Hello welcome to my basic https server in python</h1>
-        <a href="/about"><button type="button">about</button></a>
-        <a href="/contact"><button type="button">contact me</button></a>
-        </body
-        </html>
-        """
-        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
-        c.send(response.encode())
+        try:
+            file_requested = "static/index.html"
+            status_code = 200
+            status_counts["200"] += 1 
+            path_requests["/"] += 1
+            with open(file_requested, "rb") as f:
+                html_content = f.read()
+            response_headers = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n".encode('utf-8')
+            c.sendall(response_headers + html_content)
+        except FileNotFoundError:
+            status_code = 404
+            html = "<html><body><h1>404 - File Not Found</h1></body></html>"
+            response = f"HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n{html}"
+            c.send(response.encode())
+
     elif path == "/about":
-        status_code = 200
-        status_counts["200"] += 1
-        path_requests["/about"] += 1
-        html = """
-            <html>
-            <head><title>/</title></head>
-            <body>
-                <h1>I am a freshmen CS major at Texas a&m wanting to go into devops cloud. I made this basic http server so i can containerize, dockerize, and deploy onto the cloud.</h1>
-                <a href="/contact"><button type="button">contact me</button></a>
-                <a href="/"><button type="button">home</button></a>
-            </body
-            </html>
-            """
-        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
-        c.send(response.encode())
+        try:
+            file_requested = "static/about.html"
+            status_code = 200
+            status_counts["200"] += 1 
+            path_requests["/about"] += 1
+            with open(file_requested, "rb") as f:
+                html_content = f.read()
+            response_headers = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n".encode('utf-8')
+            c.sendall(response_headers + html_content)
+        except FileNotFoundError:
+            status_code = 404
+            html = "<html><body><h1>404 - File Not Found</h1></body></html>"
+            response = f"HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n{html}"
+            c.send(response.encode())
+
     elif path == "/contact":
-        status_code = 200
-        status_counts["200"] += 1 
-        path_requests["/contact"] += 1
-        html = """
-            <html>
-            <head><title>/</title></head>
-            <body>
-                <a href="https://www.linkedin.com/in/brandentoddturner/">LinkedIn</a> <h4>email: brandenturner7@gmail.com">email</h4>
-                <a href="/about"><button type="button">about</button></a> 
-                <a href="/"><button type="button">home</button></a>
-            </body
-            </html>
-            """
-        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
-        c.send(response.encode())
+        try:
+            file_requested = "static/contact.html"
+            status_code = 200
+            status_counts["200"] += 1 
+            path_requests["/contact"] += 1
+            with open(file_requested, "rb") as f:
+                html_content = f.read()
+            response_headers = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n".encode('utf-8')
+            c.sendall(response_headers + html_content)
+        except FileNotFoundError:
+            status_code = 404
+            html = "<html><body><h1>404 - File Not Found</h1></body></html>"
+            response = f"HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n{html}"
+            c.send(response.encode())
+
     elif path == "/metrics":
         status_code = 200 
         status_counts["200"] += 1 

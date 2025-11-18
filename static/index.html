@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        nav {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+        
+        nav a {
+            color: #4a9eff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            color: #fff;
+        }
+        
+        h2 {
+            color: #ddd;
+            margin-top: 30px;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        ul {
+            line-height: 1.8;
+        }
+        
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #f08d49;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <h1>Custom HTTP Server</h1>
+    
+    <p>This is a custom HTTP server built from scratch using Python's socket library. No frameworks like Flask or Django - just raw socket programming to handle HTTP requests.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Built using only Python sockets</li>
+        <li>Handles GET and POST requests</li>
+        <li>Custom routing system</li>
+        <li>Request logging with timestamps and IP addresses</li>
+        <li>Dockerized deployment</li>
+        <li>Running on AWS EC2</li>
+        <li>Infrastructure managed with Terraform</li>
+        <li>CI/CD with GitHub Actions</li>
+        <li>Monitoring with Prometheus</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>The server creates a TCP socket, binds to port 9000, and listens for incoming connections. When a client connects, it reads the HTTP request, parses the method and path, routes to the appropriate handler, and sends back an HTTP response.</p>
+
+    <h2>Tech Stack</h2>
+    <p>Python | Docker | AWS EC2 | Terraform | GitHub Actions | Prometheus | Linux</p>
+
+    <p>Check out <code>/metrics</code> for Prometheus metrics or visit the about page to learn more.</p>
+</body>
+</html>
