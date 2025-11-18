@@ -21,7 +21,11 @@ print(f"Socket is listening")
 while True:
     c, addr = s.accept()
     print(f'got connection from {addr}')
-    request = c.recv(1024).decode()
+    request_bytes = c.recv(1024)
+    if not request_bytes:
+        c.close()
+        continue
+    request = request_bytes.decode(errors="ignore")
 
     parts = request.split()
     path = parts[1] if len(parts) > 1 else "/"
@@ -80,7 +84,6 @@ while True:
         status_counts["200"] += 1 
         path_requests["/metrics"] += 1
 
-        # Build metrics with proper format
         metrics = f"http_requests_total {requests}\n"
 
         for path, count in path_requests.items():
