@@ -29,3 +29,6 @@ jobs:
             sudo docker stop $(docker ps -q) || true
             sudo docker rm $(docker ps -aq) || true
             sudo docker run -d -p 8000:8000 http-server
+            sudo docker stop prometheus || true
+            sudo docker rm prometheus || true
+            sudo docker run -d --network=host -v /home/ec2-user/http/http/BasicPythonHTTPServer/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus

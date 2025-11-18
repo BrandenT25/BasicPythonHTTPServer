@@ -41,6 +41,8 @@ while True:
         </body
         </html>
         """
+        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
+        c.send(response.encode())
     elif path == "/about":
         status_code = 200
         status_counts["200"] += 1
@@ -55,6 +57,8 @@ while True:
             </body
             </html>
             """
+        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
+        c.send(response.encode())
     elif path == "/contact":
         status_code = 200
         status_counts["200"] += 1 
@@ -68,22 +72,25 @@ while True:
                 <a href="/"><button type="button">home</button></a>
             </body
             </html>
-        """
+            """
+        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
+        c.send(response.encode())
     elif path == "/metrics":
         status_code = 200 
         status_counts["200"] += 1 
-        path_requests["/metrics"] +=1
-        html = "<html><body><h1>Metrics</h1>"
-        html += f"<p>Total Requests: {requests}</p>"
-        html += "<h2>Requests By Path</h2><ul>"
+        path_requests["/metrics"] += 1
+
+        # Build metrics with proper format
+        metrics = f"http_requests_total {requests}\n"
+
         for path, count in path_requests.items():
-            html += f"<li>{path}: {count} </li>"
-        html += "</ul>"
-        html += "<h2>Status Codes:</h2><ul>"
+            metrics += f'http_requests_by_path{{path="{path}"}} {count}\n'
+
         for status, count in status_counts.items():
-            html += f"<li> {status} : {count} </li>"
-        html += "</ul>"
-        html += "</body></html>"
+            metrics += f'http_status_codes{{code="{status}"}} {count}\n'
+
+        response = f"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\n{metrics}"
+        c.send(response.encode()) 
     else:
         status_code = 404
         status_counts["404"] += 1
@@ -95,11 +102,10 @@ while True:
             </body
             </html>
         """
+        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
+        c.send(response.encode()) 
 
 
-
-    response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
-    c.send(response.encode())
     timestamp = datetime.now()
     address = addr
     method = parts[0] if len(parts) > 0 else "Unknown"
