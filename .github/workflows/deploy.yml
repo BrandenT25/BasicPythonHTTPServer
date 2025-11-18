@@ -18,11 +18,11 @@ jobs:
           REMOTE_HOST: ${{ secrets.EC2_HOST }}
           REMOTE_USER: ${{ secrets.EC2_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.EC2_KEY }}
-          TARGET: ~/http/BasicPythonHTTPServer
+          TARGET: ~/http/http/BasicPythonHTTPServer
           port: 22
         with:
           script_after: |
-            cd ~/http/BasicPythonHTTPServer
+            cd ~/http/http/BasicPythonHTTPServer
             git pull origin main
             sudo docker build -t http-server . 
             sudo docker stop $(docker ps -q) || true
