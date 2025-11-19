@@ -105,7 +105,7 @@ while True:
             </body
             </html>
         """
-        response = f"HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n{html}"
+        response = f"HTTP/1.1 404 Not Found\r\nContent-type: text/html\r\n\r\n{html}"
         c.send(response.encode()) 
 
 

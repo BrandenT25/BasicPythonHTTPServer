@@ -1,0 +1,308 @@
+Socket Sucessfully Created
+Socket binded to 0.0.0.0 on port 8000
+Socket is listening
+got connection from ('127.0.0.1', 34420)
+ Ip Address:('127.0.0.1', 34420) 
+ Time:2025-11-19 17:44:20.783780 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34436)
+ Ip Address:('127.0.0.1', 34436) 
+ Time:2025-11-19 17:44:20.785679 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 34444)
+ Ip Address:('127.0.0.1', 34444) 
+ Time:2025-11-19 17:44:20.787416 
+ Method:GET 
+ Path:/contact 
+got connection from ('127.0.0.1', 34458)
+ Ip Address:('127.0.0.1', 34458) 
+ Time:2025-11-19 17:44:20.788893 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 34468)
+ Ip Address:('127.0.0.1', 34468) 
+ Time:2025-11-19 17:44:20.790444 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 34484)
+ Ip Address:('127.0.0.1', 34484) 
+ Time:2025-11-19 17:44:20.791850 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 34494)
+ Ip Address:('127.0.0.1', 34494) 
+ Time:2025-11-19 17:44:20.792683 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 34496)
+ Ip Address:('127.0.0.1', 34496) 
+ Time:2025-11-19 17:44:20.793523 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 34510)
+ Ip Address:('127.0.0.1', 34510) 
+ Time:2025-11-19 17:44:20.799571 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34522)
+ Ip Address:('127.0.0.1', 34522) 
+ Time:2025-11-19 17:44:20.799647 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34534)
+ Ip Address:('127.0.0.1', 34534) 
+ Time:2025-11-19 17:44:20.799707 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34538)
+ Ip Address:('127.0.0.1', 34538) 
+ Time:2025-11-19 17:44:20.800919 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34552)
+ Ip Address:('127.0.0.1', 34552) 
+ Time:2025-11-19 17:44:20.802526 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34558)
+ Ip Address:('127.0.0.1', 34558) 
+ Time:2025-11-19 17:44:20.802585 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34560)
+ Ip Address:('127.0.0.1', 34560) 
+ Time:2025-11-19 17:44:20.802639 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34576)
+ Ip Address:('127.0.0.1', 34576) 
+ Time:2025-11-19 17:44:20.803235 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34586)
+ Ip Address:('127.0.0.1', 34586) 
+ Time:2025-11-19 17:44:20.803336 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34590)
+ Ip Address:('127.0.0.1', 34590) 
+ Time:2025-11-19 17:44:20.804142 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 34592)
+ Ip Address:('127.0.0.1', 34592) 
+ Time:2025-11-19 17:44:20.806469 
+ Method:GET 
+ Path:/invalid-page 
+got connection from ('127.0.0.1', 53162)
+ Ip Address:('127.0.0.1', 53162) 
+ Time:2025-11-19 17:47:50.049792 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53168)
+ Ip Address:('127.0.0.1', 53168) 
+ Time:2025-11-19 17:47:50.051816 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 53176)
+ Ip Address:('127.0.0.1', 53176) 
+ Time:2025-11-19 17:47:50.053436 
+ Method:GET 
+ Path:/contact 
+got connection from ('127.0.0.1', 53182)
+ Ip Address:('127.0.0.1', 53182) 
+ Time:2025-11-19 17:47:50.054820 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 53198)
+ Ip Address:('127.0.0.1', 53198) 
+ Time:2025-11-19 17:47:50.056196 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 53206)
+ Ip Address:('127.0.0.1', 53206) 
+ Time:2025-11-19 17:47:50.057547 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 53208)
+ Ip Address:('127.0.0.1', 53208) 
+ Time:2025-11-19 17:47:50.058327 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 53216)
+ Ip Address:('127.0.0.1', 53216) 
+ Time:2025-11-19 17:47:50.059104 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 53224)
+ Ip Address:('127.0.0.1', 53224) 
+ Time:2025-11-19 17:47:50.064462 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53234)
+ Ip Address:('127.0.0.1', 53234) 
+ Time:2025-11-19 17:47:50.065824 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53250)
+ Ip Address:('127.0.0.1', 53250) 
+ Time:2025-11-19 17:47:50.066459 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53256)
+ Ip Address:('127.0.0.1', 53256) 
+ Time:2025-11-19 17:47:50.066521 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53268)
+ Ip Address:('127.0.0.1', 53268) 
+ Time:2025-11-19 17:47:50.067855 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53282)
+ Ip Address:('127.0.0.1', 53282) 
+ Time:2025-11-19 17:47:50.068795 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53288)
+ Ip Address:('127.0.0.1', 53288) 
+ Time:2025-11-19 17:47:50.068861 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53290)
+ Ip Address:('127.0.0.1', 53290) 
+ Time:2025-11-19 17:47:50.069445 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53306)
+ Ip Address:('127.0.0.1', 53306) 
+ Time:2025-11-19 17:47:50.070056 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53312)
+ Ip Address:('127.0.0.1', 53312) 
+ Time:2025-11-19 17:47:50.070288 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 53328)
+ Ip Address:('127.0.0.1', 53328) 
+ Time:2025-11-19 17:47:50.072287 
+ Method:GET 
+ Path:/invalid-page 
+got connection from ('127.0.0.1', 35190)
+ Ip Address:('127.0.0.1', 35190) 
+ Time:2025-11-19 17:48:48.096571 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35192)
+ Ip Address:('127.0.0.1', 35192) 
+ Time:2025-11-19 17:48:48.098588 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 35198)
+ Ip Address:('127.0.0.1', 35198) 
+ Time:2025-11-19 17:48:48.100163 
+ Method:GET 
+ Path:/contact 
+got connection from ('127.0.0.1', 35208)
+ Ip Address:('127.0.0.1', 35208) 
+ Time:2025-11-19 17:48:48.101525 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 35220)
+ Ip Address:('127.0.0.1', 35220) 
+ Time:2025-11-19 17:48:48.102884 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 35228)
+ Ip Address:('127.0.0.1', 35228) 
+ Time:2025-11-19 17:48:48.104610 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 35242)
+ Ip Address:('127.0.0.1', 35242) 
+ Time:2025-11-19 17:48:48.105515 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 35246)
+ Ip Address:('127.0.0.1', 35246) 
+ Time:2025-11-19 17:48:48.106347 
+ Method:GET 
+ Path:/metrics 
+got connection from ('127.0.0.1', 35254)
+ Ip Address:('127.0.0.1', 35254) 
+ Time:2025-11-19 17:48:48.111658 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35270)
+ Ip Address:('127.0.0.1', 35270) 
+ Time:2025-11-19 17:48:48.113209 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35274)
+ Ip Address:('127.0.0.1', 35274) 
+ Time:2025-11-19 17:48:48.113293 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35276)
+ Ip Address:('127.0.0.1', 35276) 
+ Time:2025-11-19 17:48:48.114328 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35286)
+ Ip Address:('127.0.0.1', 35286) 
+ Time:2025-11-19 17:48:48.114389 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35292)
+ Ip Address:('127.0.0.1', 35292) 
+ Time:2025-11-19 17:48:48.115836 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35304)
+ Ip Address:('127.0.0.1', 35304) 
+ Time:2025-11-19 17:48:48.116082 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35320)
+ Ip Address:('127.0.0.1', 35320) 
+ Time:2025-11-19 17:48:48.116139 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35326)
+ Ip Address:('127.0.0.1', 35326) 
+ Time:2025-11-19 17:48:48.116636 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35332)
+ Ip Address:('127.0.0.1', 35332) 
+ Time:2025-11-19 17:48:48.116694 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35344)
+ Ip Address:('127.0.0.1', 35344) 
+ Time:2025-11-19 17:48:48.119026 
+ Method:GET 
+ Path:/invalid-page 
+got connection from ('127.0.0.1', 35346)
+ Ip Address:('127.0.0.1', 35346) 
+ Time:2025-11-19 17:48:55.045219 
+ Method:GET 
+ Path:/ 
+got connection from ('127.0.0.1', 35356)
+ Ip Address:('127.0.0.1', 35356) 
+ Time:2025-11-19 17:48:55.047342 
+ Method:GET 
+ Path:/about 
+got connection from ('127.0.0.1', 35366)
+ Ip Address:('127.0.0.1', 35366) 
+ Time:2025-11-19 17:48:55.049017 
+ Method:GET 
+ Path:/contact 
+got connection from ('127.0.0.1', 35378)
+ Ip Address:('127.0.0.1', 35378) 
+ Time:2025-11-19 17:48:55.050465 
+ Method:GET 
+ Path:/about 
