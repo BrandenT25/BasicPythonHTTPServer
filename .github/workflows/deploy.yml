@@ -33,7 +33,7 @@ jobs:
 
     - name: run bash test script
       run: | 
-        chmod +x tests/run_tests
+        chmod +x tests/run_tests.sh
         ./tests/run_tests.sh
       
     - name: stop docker containers 
