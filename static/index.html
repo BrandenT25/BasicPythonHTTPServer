@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>HTTP Server</title>
+    <title>HTTPS Server</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -77,10 +77,11 @@
         <li>Testing with Pytest and Bash Scripts</li>
         <li>CI/CD with GitHub Actions</li>
         <li>Monitoring with Prometheus</li>
+        <li>Encryption with Nginx Reverse Proxy</li>
     </ul>
 
     <h2>How It Works</h2>
-    <p>The server creates a TCP socket, binds to port 8000, and listens for incoming connections. When a client connects, it reads the HTTP request, parses the method and path, routes to the appropriate handler, and sends back an HTTP response.</p>
+    <p>The server creates a TCP socket, binds to port 8000, and listens for incoming connections. When a client connects makes a request to my custom domain it redirects them to my nginx port which using SSL verfication to encrypt the data</p>
 
     <h2>Tech Stack</h2>
     <p>Python | Docker | AWS EC2 | Terraform | GitHub Actions | Prometheus | Linux</p>
