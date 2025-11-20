@@ -22,7 +22,7 @@ jobs:
       run : |
           python -m venv venv
           source venv/bin/activate
-          pip install pytest requests socket
+          pip install pytest requests
           sleep 5
 
     - name: build and run docker container
