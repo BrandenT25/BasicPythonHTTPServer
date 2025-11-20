@@ -68,7 +68,7 @@ while True:
             file_requested = "static/resume.html"
             status_code = 200
             status_counts["200"] += 1 
-            path_requests["/contact"] += 1
+            path_requests["/resume"] += 1
             with open(file_requested, "rb") as f:
                 html_content = f.read()
             response_headers = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n".encode('utf-8')
