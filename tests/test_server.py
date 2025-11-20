@@ -7,7 +7,7 @@ class TestHTTPserver:
 
     def test_Home_Page(self):
         response = requests.get(f"{url}/")
-        assert response.status_code == 200
+        assert response.status_code == 20
 
     def test_About_Page(self):
         response = requests.get(f"{url}/about")
