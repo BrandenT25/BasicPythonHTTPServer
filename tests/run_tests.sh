@@ -11,7 +11,6 @@ sleep 1
 cd tests/
 pytest test_server.py
 sleep 1
-kill $PID
 deactivate
 
 
