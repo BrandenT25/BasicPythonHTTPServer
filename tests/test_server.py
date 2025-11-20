@@ -10,15 +10,15 @@ class TestHTTPserver:
         assert response.status_code == 200
 
     def test_About_Page(self):
-        response = requests.get(f"{url}/about")
+        response = requests.get(f"{url}/projects")
         assert response.status_code == 200
 
     def test_Contact_Page(self):
-        response = requests.get(f"{url}/contact")
+        response = requests.get(f"{url}/resume")
         assert response.status_code == 200
 
     def test_Metric_Page(self):
-        response = requests.get(f"{url}/about")
+        response = requests.get(f"{url}/metrics")
         assert response.status_code == 200
 
     def test_Metric_Format(self):

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        nav {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+        
+        nav a {
+            color: #4a9eff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            color: #fff;
+        }
+        
+        h2 {
+            color: #ddd;
+            margin-top: 35px;
+            margin-bottom: 5px;
+        }
+        
+        h3 {
+            color: #999;
+            font-weight: normal;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        ul {
+            line-height: 1.8;
+        }
+        
+        .tech-stack {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        a {
+            color: #4a9eff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/resume">Resume</a>
+    </nav>
+
+    <h1>Projects</h1>
+    
+    <p>A collection of infrastructure and DevOps projects I've built to learn production systems.</p>
+
+    <h2>Production HTTP Server (This Site)</h2>
+    <h3>November 2025</h3>
+    <p>Custom HTTP server built from scratch using Python sockets to deeply understand web protocols and server architecture. Deployed with full production infrastructure including monitoring, CI/CD, and automated testing.</p>
+    <ul>
+        <li>Built using only Python socket library - no web frameworks</li>
+        <li>Custom routing, request logging, and error handling</li>
+        <li>Deployed on AWS EC2 with Infrastructure as Code (Terraform)</li>
+        <li>Automated testing with pytest and bash scripts integrated into CI/CD</li>
+        <li>GitHub Actions pipeline with automated deployments</li>
+        <li>Prometheus monitoring with custom metrics endpoint</li>
+        <li>Nginx reverse proxy with SSL/TLS encryption</li>
+        <li>Handles 100+ concurrent requests with 99.9% uptime</li>
+    </ul>
+    <p class="tech-stack"><strong>Tech:</strong> Python, Docker, AWS EC2, Terraform, GitHub Actions, Prometheus, Nginx, Linux, Bash</p>
+
+    <h2>Enterprise Password Manager</h2>
+    <h3>September 2025</h3>
+    <p>Secure password management application with enterprise-grade encryption and Kubernetes orchestration. Built to learn container orchestration and distributed systems monitoring.</p>
+    <ul>
+        <li>Python/Flask REST API with AES-256 end-to-end encryption</li>
+        <li>Deployed on Kubernetes cluster with horizontal pod autoscaling</li>
+        <li>10+ replica pods with automated health checks and self-healing</li>
+        <li>Prometheus and Grafana monitoring with custom dashboards</li>
+        <li>Tracks latency (p95, p99), error rates, and SLIs</li>
+        <li>GitOps workflow with version-controlled manifests</li>
+        <li>Automated deployments and rollback capabilities</li>
+    </ul>
+    <p class="tech-stack"><strong>Tech:</strong> Python, Flask, Docker, Kubernetes, Prometheus, Grafana, PostgreSQL</p>
+
+    <h2>Home Lab Infrastructure</h2>
+    <h3>August 2025</h3>
+    <p>Production-simulating home lab environment for learning enterprise infrastructure, virtualization, and network security. Runs multiple isolated environments for testing deployments.</p>
+    <ul>
+        <li>Proxmox hypervisor managing 5+ virtual machines</li>
+        <li>OPNsense virtual router with VLAN segmentation</li>
+        <li>Firewall rules, IDS/IPS, and VPN for secure remote access</li>
+        <li>15+ Docker containers across dev, staging, and prod environments</li>
+        <li>Automated infrastructure provisioning with Ansible playbooks</li>
+        <li>Network monitoring and traffic analysis</li>
+        <li>Reduced manual deployment time by 70%</li>
+    </ul>
+    <p class="tech-stack"><strong>Tech:</strong> Proxmox, OPNsense, Docker, Ansible, Linux, Networking</p>
+
+    <h2>Cognest - Mind Mapping Application</h2>
+    <h3>September 2025 - Present</h3>
+    <p>Co-founded productivity startup building an innovative mind-mapping application. Responsible for infrastructure architecture, cloud deployments, and CI/CD automation.</p>
+    <ul>
+        <li>Architected full-stack application with Electron/React and Node.js/Express.js</li>
+        <li>Engineered CI/CD pipeline reducing deployment time by 85%</li>
+        <li>Automated deployments to Vercel (frontend) and Railway (backend)</li>
+        <li>Implemented Firebase Authentication and Firestore for real-time sync</li>
+        <li>Cloudflare CDN integration for global content delivery</li>
+        <li>Monitoring and logging for application health tracking</li>
+    </ul>
+    <p class="tech-stack"><strong>Tech:</strong> TypeScript, Electron, React, Node.js, PostgreSQL, Firebase, GitHub Actions, Vercel, Railway</p>
+
+    <h2>View Source Code</h2>
+    <p>Most of my projects are open source. Check out my <a href="https://github.com/brandent25" target="_blank">GitHub profile</a> to see the code and documentation.</p>
+</body>
+</html>

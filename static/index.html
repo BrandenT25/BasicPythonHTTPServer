@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>HTTPS Server</title>
+    <title>Branden Turner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,11 +31,14 @@
         
         h1 {
             color: #fff;
+            margin-bottom: 5px;
         }
         
         h2 {
             color: #ddd;
             margin-top: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
         
         p {
@@ -46,46 +49,79 @@
             line-height: 1.8;
         }
         
-        code {
-            background-color: #2d2d2d;
-            padding: 2px 6px;
-            border-radius: 3px;
-            color: #f08d49;
+        .subtitle {
+            color: #999;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info a {
+            color: #4a9eff;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .skills-section {
+            margin: 20px 0;
+        }
+        
+        .skills-section p {
+            margin: 8px 0;
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/projects">Projects</a>
+        <a href="/resume">Resume</a>
     </nav>
 
-    <h1>Custom HTTPS Server</h1>
+    <h1>Branden Turner</h1>
+    <p class="subtitle">Computer Science Student | DevOps & Cloud Engineering</p>
     
-    <p>This is a custom HTTPS server built from scratch using Python's socket library. No frameworks like Flask or Django - just raw socket programming to handle HTTP requests.</p>
+    <div class="contact-info">
+        <p>📧 <a href="mailto:brandent35@tamu.edu">brandent35@tamu.edu</a> | 
+        📱 817-692-2018 | 
+        📍 College Station, TX</p>
+        <p>💼 <a href="https://linkedin.com/in/brandent35" target="_blank">LinkedIn</a> | 
+        💻 <a href="https://github.com/brandent25" target="_blank">GitHub</a></p>
+    </div>
 
-    <h2>Features</h2>
-    <ul>
-        <li>Built using only Python sockets</li>
-        <li>Handles GET and POST requests</li>
-        <li>Custom routing system</li>
-        <li>Request logging with timestamps and IP addresses</li>
-        <li>Dockerized deployment</li>
-        <li>Running on AWS EC2</li>
-        <li>Infrastructure managed with Terraform</li>
-        <li>Testing with Pytest and Bash Scripts</li>
-        <li>CI/CD with GitHub Actions</li>
-        <li>Monitoring with Prometheus</li>
-        <li>Encryption with Nginx Reverse Proxy</li>
-    </ul>
+    <h2>About Me</h2>
+    <p>I'm a Computer Science student at Texas A&M University focused on cloud computing and DevOps engineering. I build infrastructure that's reliable, automated, and scalable. My approach is hands-on - I learn by deploying real projects to production, managing them with proper CI/CD pipelines, and monitoring everything.</p>
+    
+    <p>Currently co-founding Cognest, a productivity startup, where I architect full-stack applications and manage cloud infrastructure. I'm passionate about automation, infrastructure as code, and building systems that make developers' lives easier.</p>
 
-    <h2>How It Works</h2>
-    <p>The server creates a TCP socket, binds to port 8000, and listens for incoming connections. When a client connects makes a request to my custom domain it redirects them to my nginx port which using SSL verfication to encrypt the data</p>
+    <h2>Technical Skills</h2>
+    
+    <div class="skills-section">
+        <p><strong>Languages:</strong> Python, JavaScript/TypeScript, Bash, Go, C++, SQL</p>
+        
+        <p><strong>DevOps & SRE:</strong> Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Prometheus, Grafana, Nginx</p>
+        
+        <p><strong>Cloud Platforms:</strong> AWS (EC2, IAM, Security Groups), Vercel, Railway, Cloudflare</p>
+        
+        <p><strong>Databases:</strong> PostgreSQL, Firebase, Supabase</p>
+        
+        <p><strong>Tools & Frameworks:</strong> Node.js, Express.js, Flask, React, Electron, Git/GitHub, Ansible</p>
+    </div>
 
-    <h2>Tech Stack</h2>
-    <p>Python | Docker | AWS EC2 | Terraform | GitHub Actions | Prometheus | Linux</p>
+    <h2>What I'm Working On</h2>
+    <p><strong>Cognest</strong> - Co-Founder & Software Engineer (September 2025 - Present)</p>
+    <p>Building a mind-mapping application that transforms traditional note-taking. Architecting full-stack systems with automated deployments, managing cloud infrastructure across multiple environments, and implementing monitoring solutions.</p>
 
-    <p>Check out <code>/metrics</code> for Prometheus metrics or visit the about page to learn more.</p>
+    <h2>Looking For</h2>
+    <p>Summer 2026 internships in DevOps, Site Reliability Engineering, or Cloud Engineering. I want to work on infrastructure automation, CI/CD pipelines, monitoring systems, and building reliable distributed systems at scale.</p>
+    
+    <p>Check out my <a href="/projects" style="color: #4a9eff;">projects</a> or download my <a href="/resume" style="color: #4a9eff;">resume</a>.</p>
 </body>
 </html>

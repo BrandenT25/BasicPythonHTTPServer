@@ -9,7 +9,7 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 port = 8000
 host_ip = '0.0.0.0'
 requests = 0 
-path_requests = {"/": 0, "/about": 0, "/contact" : 0, "/metrics": 0}
+path_requests = {"/": 0, "/resume": 0, "/projects" : 0, "/metrics": 0}
 status_counts = {"200": 0, "404": 0}
 s.bind((host_ip, port))
 print(f"Socket binded to {host_ip} on port {port}")
@@ -47,12 +47,12 @@ while True:
             response = f"HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n{html}"
             c.send(response.encode())
 
-    elif path == "/about":
+    elif path == "/projects":
         try:
-            file_requested = "static/about.html"
+            file_requested = "static/projects.html"
             status_code = 200
             status_counts["200"] += 1 
-            path_requests["/about"] += 1
+            path_requests["/projects"] += 1
             with open(file_requested, "rb") as f:
                 html_content = f.read()
             response_headers = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n".encode('utf-8')
@@ -63,9 +63,9 @@ while True:
             response = f"HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n{html}"
             c.send(response.encode())
 
-    elif path == "/contact":
+    elif path == "/resume":
         try:
-            file_requested = "static/contact.html"
+            file_requested = "static/resume.html"
             status_code = 200
             status_counts["200"] += 1 
             path_requests["/contact"] += 1
