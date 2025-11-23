@@ -1,6 +1,6 @@
 import socket
 from datetime import datetime
-import ipinfo
+
 
 s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
 print ("Socket Sucessfully Created")
