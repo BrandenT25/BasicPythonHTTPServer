@@ -1,5 +1,6 @@
 import socket
 from datetime import datetime
+import ipinfo
 
 s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
 print ("Socket Sucessfully Created")
@@ -112,6 +113,9 @@ while True:
     timestamp = datetime.now()
     address = addr
     method = parts[0] if len(parts) > 0 else "Unknown"
+    
+
+
     print(f" Ip Address:{address} \n Time:{timestamp} \n Method:{method} \n Path:{path} ")
 
     c.close()
