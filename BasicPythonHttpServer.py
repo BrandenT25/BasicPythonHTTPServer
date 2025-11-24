@@ -20,18 +20,22 @@ print(f"Socket is listening")
 
 
 while True:
-    c, addr = s.accept()
-    c.settimeout(10)
-    print(f'got connection from {addr}')
-    request_bytes = c.recv(1024)
-    if not request_bytes:
-        c.close()
-        continue
-    request = request_bytes.decode(errors="ignore")
+    try: 
+        c, addr = s.accept()
+        c.settimeout(10)
+        print(f'got connection from {addr}')
+        request_bytes = c.recv(1024)
+        if not request_bytes:
+            c.close()
+            continue
+        request = request_bytes.decode(errors="ignore")
 
-    parts = request.split()
-    path = parts[1] if len(parts) > 1 else "/"
-    requests += 1
+        parts = request.split()
+        path = parts[1] if len(parts) > 1 else "/"
+        requests += 1
+    except ConnectionResetError:
+        print("Connection reset reset by peer")
+        c.close()
 
     if path == "/":
         try:
