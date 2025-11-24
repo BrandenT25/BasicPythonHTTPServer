@@ -21,6 +21,7 @@ print(f"Socket is listening")
 
 while True:
     c, addr = s.accept()
+    c.settimeout(10)
     print(f'got connection from {addr}')
     request_bytes = c.recv(1024)
     if not request_bytes:
