@@ -130,7 +130,10 @@ while True:
         traceback.print_exc()
     finally:
         if c:
-            c.shutdown(socket.SHUT_WR)  
+            try:
+                c.shutdown(socket.SHUT_WR)
+            except(OSError):
+                pass
             c.close()  
 
 
